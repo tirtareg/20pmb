@@ -26,13 +26,11 @@ data <- db %>%
 
 ```
 
-Ringkasan
-===
+# Ringkasan
 
 **Pendaftar lolos seleksi di setiap jalur penerimaaan**
 
-Row
----
+## Row
 
 ### snmptn {.value-box}
 
@@ -118,13 +116,11 @@ valueBox(
 )
 ```
 
-Row {data-height=30}
----
+## Row {data-height="30"}
 
 **Mahasiswa Baru di setiap jalur penerimaan**
 
-Row
----
+## Row
 
 ### snmptn {.value-box}
 
@@ -210,8 +206,7 @@ valueBox(
 )
 ```
 
-Row
----
+## Row
 
 ### **Sebaran Mahasiswa Baru di tiap fakultas**
 
@@ -246,9 +241,7 @@ kable(data) %>%
 
 ```
 
-
-Row
----
+## Row
 
 ### **Mahasiswa Baru (D3 dan S1) berdasarkan kategori sekolah asal**
 
@@ -276,8 +269,7 @@ div(plot_ly(type = "pie", labels = data$jns_sklh, values = data$banyak,
         insidetextorientation = "radial"), align = "center")
 ```
 
-Row
----
+## Row
 
 ### **Mahasiswa Baru (D3 dan S1) berdasarkan Provinsi asal**
 
@@ -319,11 +311,9 @@ kable(data) %>%
   add_header_above(c(" " = 1, "Jenis Kelamin" = 2, " " = 1))
 ```
 
-Progres Registrasi
-===
+# Progres Registrasi
 
-row
----
+## row
 
 ### **Progres registrasi di setiap Fakultas**
 
@@ -374,8 +364,7 @@ kable(data) %>%
 
 ```
 
-row
----
+## row
 
 ### **Progres registrasi di setiap Program Studi**
 
