@@ -15,6 +15,7 @@ Sys.setlocale("LC_TIME", "IND")
 
 library(tidyverse)
 library(readxl)
+library(downloadthis)
 
 db <- read_excel("G:/My Drive/#PMB/2020/Dashboard/maba20_4web.xlsx")
 
@@ -266,6 +267,17 @@ kable(data) %>%
                 latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "Jenis Kelamin" = 2, " " = 1))
 
+data %>%
+  download_this(
+    output_name = "maba per fak",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+
+
 ```
 
 ## Row
@@ -316,6 +328,17 @@ kable(data) %>%
   kable_styling(bootstrap_options = "striped", full_width = F,
                 latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "Jenis Kelamin" = 2, " " = 1))
+
+data %>%
+  download_this(
+    output_name = "maba per prov",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+
 ```
 
 <!-- ### **Mahasiswa Baru berdasarkan pendidikan orang tua** -->
@@ -411,6 +434,17 @@ kable(data) %>%
                 latex_options = "scale_down") %>%
   add_header_above(c(" " = 3, "Registrasi Berkas" = 4," " = 1))
 
+data %>%
+  download_this(
+    output_name = "regis per fak",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+
+
 ```
 
 ## row
@@ -479,6 +513,15 @@ kable(data, row.names = F) %>%
   pack_rows("Pascasarjana", 41, 53, label_row_css = "background-color: #666; color: #fff;") %>%
   pack_rows("Kedokteran", 54, 58, label_row_css = "background-color: #666; color: #fff;")
 
+data %>%
+  download_this(
+    output_name = "regis per prodi",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
 
 ```
 
@@ -506,6 +549,16 @@ kable(data) %>%
   kable_styling(bootstrap_options = "striped", full_width = F,
                 latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "Jalur Masuk" = 7," " = 1))
+
+data %>%
+  download_this(
+    output_name = "rekap maba per fak",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
 
 ```
 
@@ -539,6 +592,17 @@ kable(data, row.names = F) %>%
   pack_rows("Ilmu Sosial dan Ilmu Politik", 38, 40, label_row_css = "background-color: #666; color: #fff;") %>%
   pack_rows("Pascasarjana", 41, 53, label_row_css = "background-color: #666; color: #fff;") %>%
   pack_rows("Kedokteran", 54, 58, label_row_css = "background-color: #666; color: #fff;")
+
+
+data %>%
+  download_this(
+    output_name = "rekap maba per prodi",
+    output_extension = ".xlsx",
+    button_label = "Download data",
+    button_type = "warning",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
 
 
 ```
